@@ -4,7 +4,17 @@ import bmw from '../../img/bmw.png'
 import bmwBig from '../../img/BMW big.png'
 import merc from '../../img/merc.png'
 import tesla from '../../img/tesla.png'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getCars } from '../../store/collectSlice'
+import axios from 'axios'
+axios.defaults.baseURL = 'https://6501abed736d26322f5c1aaa.mockapi.io/auto/sell';
 export const Main = () => {
+    const dispatch = useDispatch()
+    useEffect(()=> {
+       dispatch(getCars())
+    },[])
+    const data = useSelector(state => state.data)
     return (
         <section className={styles.sect}>
             <div className={styles.container}>
@@ -23,7 +33,7 @@ export const Main = () => {
 </div>
 <h3 className={styles.main_text}> Innovative platform that offers a unique opportunity to rent cars from individuals around the world. <br /> 
 Whether you need a car for a weekend out of town or a luxury car <br /> for a special occasion, we have the perfect option for everyone.</h3>
-<button className={styles.button_catalog}>Go to catalog</button>
+<button className={styles.button_catalog} onClick={()=> {console.log(data)}}>Go to catalog</button>
             </div>
         </section>
     )
