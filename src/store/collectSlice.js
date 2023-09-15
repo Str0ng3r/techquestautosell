@@ -4,15 +4,23 @@ import axios from 'axios';
 axios.defaults.baseURL = 'https://6501abed736d26322f5c1aaa.mockapi.io/auto/sell'
 
 
-export const getCars = createAsyncThunk('cars/getCars', async (thunkApi) => {
+export const getCars = createAsyncThunk('cars/getCars', async (data,thunkApi) => {
     try{
-        const response = await axios.get('/collections')
+        const response = await axios.get(`/collections?page=${data.page}&limit=8`)
         return response
     }catch (e) {
         return thunkApi.rejectWithValue(e.message)
     }
 })
 
+// export const getCarsStart = createAsyncThunk('cars/getCars', async (thunkApi) => {
+//   try{
+//       const response = await axios.get(`/collections?page=1&limit=8`)
+//       return response
+//   }catch (e) {
+//       return thunkApi.rejectWithValue(e.message)
+//   }
+// })
 
 
 
@@ -24,8 +32,9 @@ const collectionsSlice = createSlice({
     price:'',
     probeg:'',
     isLoading:false,
+    favorites:[],
     error:null,
-    data:null
+    data:[]
   },
   reducers: {
     setId(state, action) {
@@ -40,6 +49,9 @@ const collectionsSlice = createSlice({
     setProbeg(state,action) {
         state.probeg = action.paylolad
     },
+    setFavor(state,action) {
+      state.favorites = [...state.favorites,action.payload]
+    }
   },
   extraReducers: {
     [getCars.pending](state,action) {
@@ -47,8 +59,9 @@ const collectionsSlice = createSlice({
         state.error = null
     },
     [getCars.fulfilled](state,action) {
+      console.log('getCars.fulfilled triggered')
         state.isLoading = false
-        state.data = action.payload.data
+        state.data = [...state.data, ...action.payload.data];
         state.error = null
     },
     [getCars.rejected](state,action) {
@@ -58,5 +71,5 @@ const collectionsSlice = createSlice({
   }
 });
 
-export const { setId, setFirma,setPrice,setProbeg,setis } = collectionsSlice.actions;
+export const { setId, setFirma,setPrice,setProbeg,setFavor } = collectionsSlice.actions;
 export const mainReducer = collectionsSlice.reducer;
