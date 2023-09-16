@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/techquestautosell/static/css/main.dac7135f.css",
+    "main.js": "/techquestautosell/static/js/main.744d7ba1.js",
+    "static/js/787.48a00cd0.chunk.js": "/techquestautosell/static/js/787.48a00cd0.chunk.js",
+    "index.html": "/techquestautosell/index.html",
+    "main.dac7135f.css.map": "/techquestautosell/static/css/main.dac7135f.css.map",
+    "main.744d7ba1.js.map": "/techquestautosell/static/js/main.744d7ba1.js.map",
+    "787.48a00cd0.chunk.js.map": "/techquestautosell/static/js/787.48a00cd0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dac7135f.css",
+    "static/js/main.744d7ba1.js"
+  ]
+}
