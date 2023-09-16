@@ -4,10 +4,30 @@ import { useDispatch, useSelector } from "react-redux";
 import { getCars, setFavor } from "../../store/collectSlice";
 export const Home = () => {
   const [page, setPage] = useState(1);
-  const [modalRight,setModalRight] = useState(null)
   const dispatch = useDispatch();
   const data = useSelector((state) => state.data);
 const favorites = useSelector((state)=> state.favorites)
+const [modalData,setModalData] = useState(null)
+const [showModal, setShowModal] = useState(false);
+
+const handleOpenModal = (evt) => {
+  const id = Number(evt.currentTarget.dataset.modal)
+  console.log(id)
+  console.log(data)
+  const cardModal = data.find(el => el.id === id)
+  console.log(cardModal)
+  setModalData(cardModal)
+  setShowModal(true);
+}
+
+const handleCloseModal = () => {
+  setShowModal(false);
+  setModalData(null)
+}
+
+
+
+
   useEffect(() => {
     dispatch(getCars({ page: page }));
     setPage((prevPage) => prevPage + 1);
@@ -16,12 +36,27 @@ const favorites = useSelector((state)=> state.favorites)
 
 
 
-const modalFunction = (evt) => {
-
-}
+// const modalFunction = (evt) => {
+// const id = evt.currentTarget.dataset.modal 
+// console.log(id)
+// const cardModal = favorites.filter(el => el.id === id)
+// console.log(cardModal)
+// }
 
   return (
     <section className={styles.sect}>
+      {showModal && (
+          <div className={styles.bg_modal}>
+        <div className={styles.modalka}>
+          <div className={styles.cont_modal}>
+            <img src={modalData.img} alt={modalData.make} className={styles.img_car_modal}/>
+            <h2>{modalData.make}</h2>
+            <span onClick={handleCloseModal}>X;</span>
+            <p>OKAY</p>
+          </div>
+        </div>
+        </div>
+      )}
       <div className={styles.container}>
         <div className={styles.input_container}>
           <ul className={styles.ul_search}>
@@ -113,7 +148,7 @@ const modalFunction = (evt) => {
                 <p>{el.make}</p>
                 <p>{el.id}</p>
               </div>
-              <button className={styles.button_learnmore} data-modal={el.id}>Learn More </button>
+              <button className={styles.button_learnmore} data-modal={el.id} onClick={handleOpenModal}>Learn More </button>
             </div>
           ))}
         </div>

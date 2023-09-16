@@ -323,3 +323,144 @@ line-height: 24px;
 .fill_blue {
     fill: #3470FF;
 }
+.bg_modal {
+    background-color: rgba(33, 33, 33, 0.7);
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    z-index: 998;
+}
+.modalka {
+    opacity: 1;
+    border-radius: 24px;
+    background: #FFFFFF;
+    padding: 20px 36px;
+    z-index: 999;
+}
+.cont_modal {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img_car_modal {
+    width: 100%;
+    border-radius: 14px;
+    object-fit: cover;
+    margin-bottom: 14px;
+}
+
+.cont_for_main_text_modal {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start ;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.main_text_modal {
+    color: #121417;
+font-family: Manrope;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+}
+.main_text_modal_span {
+    color: #3470FF;
+font-family: Manrope;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+}
+
+.cont_for_punkts_modal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 14px;
+}
+
+.punkts_modal {
+    color: rgba(18, 20, 23, 0.50);
+font-family: Manrope;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px; /* 150% */
+}
+.description_text_modal {
+    color: #121417;
+font-family: Manrope;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+margin-bottom:24px;
+}
+.cont_for_accesories {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+.accesories_main_text {
+    color: #121417;
+font-family: Manrope;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 142.857% */
+margin-bottom: 8px;
+}
+.accesories_punkts {
+    color: rgba(18, 20, 23, 0.50);
+font-family: Manrope;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px; /* 150% */
+}
+.rental_conditions_cont {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 31px;
+}
+.rental_conditions_main_text {
+    color: #121417;
+font-family: Manrope;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 142.857% */
+margin-bottom: 15px;
+}
+.rental_conditions_punkts {
+    color: #363535;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+}
+.rental_conditions_punkts span{
+    color: #3470FF;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+}
