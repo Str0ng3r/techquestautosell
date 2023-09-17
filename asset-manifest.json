@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/techquestautosell/static/css/main.dac7135f.css",
-    "main.js": "/techquestautosell/static/js/main.744d7ba1.js",
+    "main.css": "/techquestautosell/static/css/main.e9c5e03f.css",
+    "main.js": "/techquestautosell/static/js/main.a80f98c2.js",
     "static/js/787.48a00cd0.chunk.js": "/techquestautosell/static/js/787.48a00cd0.chunk.js",
+    "static/media/merc.png": "/techquestautosell/static/media/merc.3fb5c433e82b12efdfb4.png",
+    "static/media/bmw.png": "/techquestautosell/static/media/bmw.bfccd9144d8dd4e62b03.png",
+    "static/media/BMW big.png": "/techquestautosell/static/media/BMW big.cebdc599169ba4ad0442.png",
+    "static/media/bugatti.png": "/techquestautosell/static/media/bugatti.8fb02675c601e1b815b1.png",
+    "static/media/tesla.png": "/techquestautosell/static/media/tesla.ad065962825c72e7f2d8.png",
     "index.html": "/techquestautosell/index.html",
-    "main.dac7135f.css.map": "/techquestautosell/static/css/main.dac7135f.css.map",
-    "main.744d7ba1.js.map": "/techquestautosell/static/js/main.744d7ba1.js.map",
+    "main.e9c5e03f.css.map": "/techquestautosell/static/css/main.e9c5e03f.css.map",
+    "main.a80f98c2.js.map": "/techquestautosell/static/js/main.a80f98c2.js.map",
     "787.48a00cd0.chunk.js.map": "/techquestautosell/static/js/787.48a00cd0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dac7135f.css",
-    "static/js/main.744d7ba1.js"
+    "static/css/main.e9c5e03f.css",
+    "static/js/main.a80f98c2.js"
   ]
 }
