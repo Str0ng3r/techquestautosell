@@ -28,15 +28,22 @@ const collectionsSlice = createSlice({
   name: 'cars',
   initialState: {
     id: '',
-    firma: '',
-    price:'',
-    probeg:'',
+    firma: 'HUMMER',
+   price:'$25',
+   startProbeg:1,
+    probeg:1000000,
     isLoading:false,
     favorites:[],
     error:null,
     data:[]
   },
   reducers: {
+    setStartProbeg(state,action) {
+      state.startProbeg = action.payload
+    },
+    setData(state,action) {
+      state.data = action.payload
+    },
     setId(state, action) {
       state.id = action.payload;
     },
@@ -47,7 +54,7 @@ const collectionsSlice = createSlice({
         state.price = action.payload
     },
     setProbeg(state,action) {
-        state.probeg = action.paylolad
+        state.probeg = action.payload
     },
     setFavor(state,action) {
       state.favorites = [...state.favorites,action.payload]
@@ -71,5 +78,5 @@ const collectionsSlice = createSlice({
   }
 });
 
-export const { setId, setFirma,setPrice,setProbeg,setFavor } = collectionsSlice.actions;
+export const { setId, setFirma,setPrice,setProbeg,setFavor,setData,setStartProbeg } = collectionsSlice.actions;
 export const mainReducer = collectionsSlice.reducer;

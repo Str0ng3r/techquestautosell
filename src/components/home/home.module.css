@@ -342,12 +342,14 @@ line-height: 24px;
     background: #FFFFFF;
     padding: 20px 36px;
     z-index: 999;
+    position: relative;
+    max-width: 540px;
 }
 .cont_modal {
     display: flex;
     margin: 0 auto;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 .img_car_modal {
@@ -385,9 +387,10 @@ line-height: 24px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin-bottom: 14px;
+    width: 60%;
 }
 
 .punkts_modal {
@@ -397,6 +400,7 @@ font-size: 12px;
 font-style: normal;
 font-weight: 400;
 line-height: 18px; /* 150% */
+margin: 4px;
 }
 .description_text_modal {
     color: #121417;
@@ -406,6 +410,11 @@ font-style: normal;
 font-weight: 400;
 line-height: 20px; /* 142.857% */
 margin-bottom:24px;
+text-align: left;
+}
+.cont_wrap_punkts{
+    display: flex;
+    gap: 20px;
 }
 .cont_for_accesories {
     display: flex;
@@ -455,12 +464,56 @@ margin-bottom: 15px;
     font-weight: 400;
     line-height: 18px; /* 150% */
 }
+.close_btn {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    cursor: pointer;
+}
+.return_button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.img_return{
+    width: 60px;
+    height: 60px;
+}
+
+.return_none {
+    display: none;
+}
 .rental_conditions_punkts span{
     color: #3470FF;
-    font-family: Montserrat;
+    font-family: Manrope;
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
     line-height: 18px;
     letter-spacing: -0.24px;
+}
+.wrap_rental_conditions_punkts_container{
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.button_zwonok {
+    color: var(--White, #FFF);
+font-family: Manrope;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+    display: flex;
+    border-radius: 12px;
+background: #3470FF;
+padding: 12px 50px;
+justify-content: center;
+align-items: center;
+border: none;
+cursor: pointer;
 }
