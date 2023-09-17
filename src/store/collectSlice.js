@@ -7,22 +7,11 @@ axios.defaults.baseURL = 'https://6501abed736d26322f5c1aaa.mockapi.io/auto/sell'
 export const getCars = createAsyncThunk('cars/getCars', async (data,thunkApi) => {
     try{
         const response = await axios.get(`/collections?page=${data.page}&limit=8`)
-        return response
+        return response.data
     }catch (e) {
         return thunkApi.rejectWithValue(e.message)
     }
 })
-
-// export const getCarsStart = createAsyncThunk('cars/getCars', async (thunkApi) => {
-//   try{
-//       const response = await axios.get(`/collections?page=1&limit=8`)
-//       return response
-//   }catch (e) {
-//       return thunkApi.rejectWithValue(e.message)
-//   }
-// })
-
-
 
 const collectionsSlice = createSlice({
   name: 'cars',
@@ -72,7 +61,7 @@ const collectionsSlice = createSlice({
     [getCars.fulfilled](state,action) {
       console.log('getCars.fulfilled triggered')
         state.isLoading = false
-        state.data = [...state.data, ...action.payload.data];
+        state.data = [...state.data, ...action.payload];
         state.error = null
     },
     [getCars.rejected](state,action) {

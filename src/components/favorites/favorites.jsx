@@ -38,7 +38,7 @@ export const Favorit = () => {
   return (
     <section className={stylesFav.sect}>
          {showModal && (
-        <div className={styles.bg_modal}>
+        <div className={styles.bg_modal} onClick={handleCloseModal}>
           <div className={styles.modalka}>
             <div className={styles.cont_modal}>
               <img
@@ -109,7 +109,7 @@ export const Favorit = () => {
               <span onClick={handleCloseModal} className={styles.close_btn}>
                 X
               </span>
-              <button className={styles.button_zwonok}>Rental Car</button>
+              <a className={styles.button_zwonok}href="tel:+380441234567">Rental Car</a>
             </div>
           </div>
         </div>

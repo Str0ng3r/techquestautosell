@@ -58,7 +58,7 @@ export const Home = () => {
   return (
     <section className={styles.sect}>
       {showModal && (
-        <div className={styles.bg_modal}>
+        <div className={styles.bg_modal} onClick={handleCloseModal}>
           <div className={styles.modalka}>
             <div className={styles.cont_modal}>
               <img
@@ -129,7 +129,7 @@ export const Home = () => {
               <span onClick={handleCloseModal} className={styles.close_btn}>
                 X
               </span>
-              <button className={styles.button_zwonok}>Rental Car</button>
+              <a className={styles.button_zwonok} href="tel:+380441234567">Rental Car</a>
             </div>
           </div>
         </div>
@@ -165,6 +165,26 @@ export const Home = () => {
                 <option value="HUMMER">HUMMER</option>
                 <option value="Reno">Reno</option>
                 <option value="BMW">BMW</option>
+                <option value="Chrysler">Chrysler</option>
+                <option value="Lamborghini">Lamborghini</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Pontiac">Pontiac</option>
+                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                <option value="Aston Martin">Aston Martin</option>
+                <option value="Bentley">Bentley</option>
+                <option value="MINI">MINI</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Lincoln">Lincoln</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Mitsubishi">Mitsubishi</option>
+                <option value="Subaru">Subaru</option>
+                <option value="Volvo">Volvo</option>
+                <option value="Buick">Buick</option>
+                <option value="Audi">Audi</option>
+                <option value="Land Rover">Land Rover</option>
+
+
+
               </select>
             </li>
             <li className={styles.li_count}>
