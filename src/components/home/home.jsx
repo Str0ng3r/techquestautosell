@@ -48,6 +48,8 @@ export const Home = () => {
   };
 
   useEffect(() => {
+    dispatch(setData([]))
+    setPage(1)
     dispatch(getCars({ page: page }));
     setPage((prevPage) => prevPage + 1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -229,7 +231,8 @@ export const Home = () => {
                 data-id={el.id}
                 className={styles.like_img_button}
                 onClick={(evt) => {
-                  dispatch(setFavor(evt.currentTarget.dataset.id));
+                  dispatch(setFavor(Number(evt.currentTarget.dataset.id)))
+                  console.log(favorites);
                 }}
               >
                 <svg

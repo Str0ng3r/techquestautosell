@@ -4,6 +4,7 @@ import bmw from '../../img/bmw.png'
 import bmwBig from '../../img/BMW big.png'
 import merc from '../../img/merc.png'
 import tesla from '../../img/tesla.png'
+import { Link } from 'react-router-dom'
 export const Main = () => {
 
     return (
@@ -24,7 +25,7 @@ export const Main = () => {
 </div>
 <h3 className={styles.main_text}> Innovative platform that offers a unique opportunity to rent cars from individuals around the world. <br /> 
 Whether you need a car for a weekend out of town or a luxury car <br /> for a special occasion, we have the perfect option for everyone.</h3>
-<button className={styles.button_catalog} >Go to catalog</button>
+<Link to='/catalog' className={styles.button_catalog} >Go to catalog</Link>
             </div>
         </section>
     )

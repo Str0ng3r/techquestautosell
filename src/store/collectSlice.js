@@ -35,7 +35,8 @@ const collectionsSlice = createSlice({
     isLoading:false,
     favorites:[],
     error:null,
-    data:[]
+    data:[],
+    first:false,
   },
   reducers: {
     setStartProbeg(state,action) {
@@ -46,6 +47,9 @@ const collectionsSlice = createSlice({
     },
     setId(state, action) {
       state.id = action.payload;
+    },
+    setFirst(state,action) {
+      state.first = action.payload
     },
     setFirma(state, action) {
       state.firma = action.payload;
@@ -78,5 +82,5 @@ const collectionsSlice = createSlice({
   }
 });
 
-export const { setId, setFirma,setPrice,setProbeg,setFavor,setData,setStartProbeg } = collectionsSlice.actions;
+export const { setId, setFirma,setPrice,setProbeg,setFavor,setData,setStartProbeg,setFirst } = collectionsSlice.actions;
 export const mainReducer = collectionsSlice.reducer;
