@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /techquestautosell/   <!-- Замените это на ваш basename -->
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /techquestautosell/index.html [L] <!-- Замените это на ваш basename -->
+</IfModule>
